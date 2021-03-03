@@ -22,8 +22,8 @@ class Publish extends Command
     {
         $fs = new Filesystem($this->app);
 
-        $path = __DIR__ . '/dist';
-        $newPath = $this->app->getRootPath() . 'public/static';
+        $path = __DIR__ . '/../../dist/';
+        $newPath = $this->app->getRootPath() . 'public/static/builder/';
         $fs->copy($path, $newPath);
 
         $output->writeln('publish success!');
