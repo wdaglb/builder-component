@@ -10,10 +10,22 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+        "symfony/filesystem": "5.x-dev"
+    },
 	"autoload": {
 		"psr-4": {
 			"ke\\builder\\": "src/"
 		}
-	}
+	},
+    "require-dev": {
+        "topthink/framework": "6.0.x-dev"
+    },
+    "extra": {
+        "think": {
+            "services": [
+              "ke\\ComponentService"
+            ]
+        }
+    }
 }
