@@ -10,10 +10,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-        "symfony/filesystem": "5.x-dev"
-    },
-	"autoload": {
+    "autoload": {
 		"psr-4": {
 			"ke\\builder\\": "src/"
 		}
@@ -24,7 +21,7 @@
     "extra": {
         "think": {
             "services": [
-              "ke\\ComponentService"
+              "ke\\builder\\ComponentService"
             ]
         }
     }
