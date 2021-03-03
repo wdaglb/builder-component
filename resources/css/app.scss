@@ -1,0 +1,198 @@
+.ke-side {
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: #393D49;
+    &-logo {
+        position: fixed;
+        left: 0;
+        top: 0;
+        text-align: center;
+        z-index: 1002;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+        font-weight: 300;
+        background-color: #393D49;
+        background-repeat: no-repeat;
+        background-position: center center;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 15%);
+        color: rgba(255,255,255,.8);
+    }
+    .layui-nav {
+        margin-top: 50px;
+    }
+    .layui-this {
+        background-color: #009688 !important;
+    }
+    .layui-nav-child a {
+        padding-left: 55px;
+    }
+    .layui-icon {
+        margin-right: 10px;
+    }
+}
+
+/* 头部 */
+.ke-header {
+    position: fixed;
+    top: 0;
+    left: 200px;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 24px;
+    z-index: 1000;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
+    .layui-nav {
+        background-color: #fff!important;
+    }
+    .layui-nav-item {
+        height: 50px;
+        line-height: 50px;
+    }
+    .layui-nav-item a,
+    .layui-nav-item a:hover {
+        color: #333;
+        cursor: pointer;
+    }
+    .layui-nav-item .layui-nav-more {
+        border-top-color: #333;
+    }
+    .layui-nav-item .layui-nav-mored {
+        border-color: transparent transparent #666;
+    }
+}
+
+/* 内容区 */
+.ke-body {
+    position: fixed;
+    top: 55px;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    width: auto;
+    overflow-y: auto;
+    background-color: #f2f2f2;
+    &-tab-icon {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        width: 40px;
+        text-align: center;
+        cursor: pointer;
+        transition: all .4s;
+        background-color: #fff;
+        z-index: 10;
+        &:hover {
+            background-color: #f6f6f6;
+        }
+    }
+    &-tab-prev {
+        left: 0;
+        border-right: 1px solid #f6f6f6;
+    }
+    &-tab-next {
+        border-left: 1px solid #f6f6f6;
+        right: 40px;
+    }
+    &-tab-down {
+        border-left: 1px solid #f6f6f6;
+        right: 0;
+    }
+    &-tabs {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 80px 0 40px;
+        .layui-icon {
+        }
+        .layui-tab-title {
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .layui-nav-more {
+            display: none;
+        }
+
+        .layui-nav {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            background: 0 0;
+            &-child {
+                top: 40px;
+                left: auto;
+                right: 0;
+            }
+
+            a {
+                height: 40px;
+            }
+        }
+    }
+    .ke-tab-content {
+        position: fixed;
+        top: 98px;
+        left: 200px;
+        right: 0;
+        bottom: 0;
+    }
+    .ke-content {
+        border: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .ke-tab-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        display: none;
+    }
+    .ke-tab-item.itemed {
+        display: block;
+    }
+    .layui-tab {
+        margin: 0;
+        overflow: hidden;
+        //overflow-x: auto;
+        //overflow-y: hidden;
+        height: 40px;
+        background-color: #fff;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 10%);
+        li:hover, .layui-this {
+            background-color: #f6f6f6;
+        }
+        li.layui-this:after {
+            width: 100%;
+            border: none;
+            height: 2px;
+            background-color: #292B34;
+            display: flex;
+        }
+
+        .layui-tab-title {
+            left: 0;
+            border: none;
+        }
+    }
+}
