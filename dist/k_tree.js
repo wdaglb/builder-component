@@ -1,0 +1,1 @@
+"use strict";layui.define(["tree"],function(e){var r=layui.tree;$("[data-tree]").each(function(e,t){var a=$(t).data("tree");r.render({elem:"#"+t.id,showCheckbox:a.showCheckbox,edit:a.edit,data:a.data})}),e("k_tree")});

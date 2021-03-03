@@ -1,0 +1,19 @@
+{
+    "name": "ke/builder-component",
+    "description": "完全使用类来构建你的页面，不需要理会css,html,js",
+    "type": "library",
+    "license": "King east",
+    "authors": [
+        {
+            "name": "King east",
+            "email": "1207877378@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload": {
+		"psr-4": {
+			"ke\\builder\\": "src/"
+		}
+	}
+}

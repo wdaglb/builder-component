@@ -13,13 +13,12 @@ const uglify = require('gulp-uglify')
 const sass = require('gulp-sass')
 const cssMin = require('gulp-cssmin')
 const autoprefixer = require('gulp-autoprefixer')
-const sourcemaps = require('gulp-sourcemaps')
 
 sass.compiler = require('dart-sass')
 
 let isDebug = false
 
-const rootPath = 'resources/'
+const rootPath = 'src/resources/'
 const outputPath = 'dist/'
 
 // clean
@@ -32,15 +31,13 @@ const clean = function () {
 // js资源构建
 const js = async function () {
     const pro = src(`${rootPath}src/**/*.js`)
-        .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ['@babel/env']
         }))
     if (!isDebug) {
         pro.pipe(uglify())
     }
-    pro.pipe(sourcemaps.write('maps/'))
-        .pipe(dest(outputPath))
+    pro.pipe(dest(outputPath))
 }
 
 // css资源构建

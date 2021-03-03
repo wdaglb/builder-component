@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "gulp",
+    "build": "gulp",
     "watch": "gulp watch"
   },
   "devDependencies": {

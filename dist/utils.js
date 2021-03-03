@@ -1,0 +1,1 @@
+"use strict";function getUrlQuery(){if(!location.search)return{};for(var r={},n=location.search.substr(1).split("&"),t=0;t<n.length;t++){var e=n[t].split("=");r[e[0]]=window.decodeURIComponent(e[1])}return r}function queryToString(r){if(!r)return"";var n,t="?";for(n in r)t+=n+"="+window.encodeURIComponent(r[n]);return"?"===t?"":t}

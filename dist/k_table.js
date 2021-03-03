@@ -1,0 +1,1 @@
+"use strict";layui.define(["layer","table"],function(a){layui.layer;var e=layui.table;console.log("hjkalsd"),$("table").each(function(a,l){e.init($(l).attr("lay-filter"))}),a("k_table")});
