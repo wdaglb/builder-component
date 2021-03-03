@@ -2,7 +2,7 @@
     "name": "ke/builder-component",
     "description": "完全使用类来构建你的页面，不需要理会css,html,js",
     "type": "library",
-    "license": "King east",
+    "license": "MIT",
     "authors": [
         {
             "name": "King east",
