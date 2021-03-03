@@ -20,13 +20,30 @@ class Publish extends Command
 
     protected function execute(Input $input, Output $output)
     {
-        $fs = new Filesystem($this->app);
-
         $path = __DIR__ . '/../../dist/';
         $newPath = $this->app->getRootPath() . 'public/static/builder/';
-        $fs->copy($path, $newPath);
+        $this->copyDir($path, $newPath);
 
         $output->writeln('publish success!');
+    }
+
+
+    protected function copyDir($src, $des)
+    {
+        $dir = opendir($src);
+        if (!is_dir($des)) {
+            mkdir($des);
+        }
+        while (false !== ($file = readdir($dir))) {
+            if (($file != '.') && ($file != '..')) {
+                if (is_dir($src . '/' . $file)) {
+                    $this->copyDir($src . '/' . $file, $des . '/' . $file);
+                } else {
+                    copy($src . '/' . $file, $des . '/' . $file);
+                }
+            }
+        }
+        closedir($dir);
     }
 
 }
