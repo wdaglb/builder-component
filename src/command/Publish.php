@@ -32,7 +32,7 @@ class Publish extends Command
     {
         $dir = opendir($src);
         if (!is_dir($des)) {
-            mkdir($des);
+            mkdir($des, 0755, true);
         }
         while (false !== ($file = readdir($dir))) {
             if (($file != '.') && ($file != '..')) {
