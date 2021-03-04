@@ -41,6 +41,9 @@ layui.define(['layer', 'element'], function(exports){
     // 选项卡滚动栏
     const tabEl = $('#admin-layout-tabs .layui-tab-title')
 
+    // 显示第一个iframe
+    $('#admin-container').parent().addClass('itemed')
+
     // 获取tabs宽度
     const getTabWidth = function () {
         const w = $('[lay-filter="admin-layout-tabs"] .layui-tab-title').width()
